@@ -1,6 +1,8 @@
 import { NewsletterAPI } from 'pliny/newsletter'
 import siteMetadata from '@/data/siteMetadata'
 
+export const runtime = 'edge'
+// Skip this route during static export
 export const dynamic = 'force-static'
 
 const handler = NewsletterAPI({

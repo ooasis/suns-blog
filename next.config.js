@@ -54,7 +54,7 @@ const securityHeaders = [
   },
 ]
 
-const output = process.env.EXPORT ? 'export' : undefined
+const output = 'export'
 const basePath = process.env.BASE_PATH || undefined
 const unoptimized = process.env.UNOPTIMIZED ? true : undefined
 
@@ -94,6 +94,14 @@ module.exports = () => {
         test: /\.svg$/,
         use: ['@svgr/webpack'],
       })
+
+      // Add fallbacks for Node.js built-in modules for Edge Runtime compatibility
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        querystring: require.resolve('querystring-es3'),
+        url: require.resolve('url/'),
+        util: require.resolve('util/'),
+      }
 
       return config
     },
