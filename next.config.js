@@ -78,7 +78,8 @@ module.exports = () => {
           hostname: 'picsum.photos',
         },
       ],
-      unoptimized,
+      // Cloudflare Pages requires unoptimized images
+      unoptimized: process.env.CF_PAGES === '1' ? true : unoptimized,
     },
     async headers() {
       return [

@@ -45,3 +45,7 @@ yarn-error.log*
 
 # Contentlayer
 .contentlayer
+
+# Cloudflare
+.wrangler
+.vercel

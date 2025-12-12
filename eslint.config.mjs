@@ -67,4 +67,11 @@ export default [
       '@typescript-eslint/ban-ts-comment': 'off',
     },
   },
+  {
+    files: ['next.config.js'],
+    rules: {
+      '@typescript-eslint/no-require-imports': 'off',
+      'import/no-commonjs': 'off',
+    },
+  },
 ]
