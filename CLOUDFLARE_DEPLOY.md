@@ -17,7 +17,7 @@ This guide will help you deploy your Next.js blog to Cloudflare Pages.
    - Go to [Cloudflare Dashboard](https://dash.cloudflare.com)
    - Navigate to **Workers & Pages** → **Create application** → **Pages** → **Connect to Git**
    - Select your Git provider and authorize Cloudflare
-   - Choose your repository (`sblog`)
+   - Choose your repository (`suns-blog`)
 
 2. **Configure build settings:**
 
@@ -68,7 +68,7 @@ This guide will help you deploy your Next.js blog to Cloudflare Pages.
    Or use the Pages-specific command:
 
    ```bash
-   wrangler pages publish .vercel/output/static --project-name=sblog
+   wrangler pages publish .vercel/output/static --project-name=suns-blog
    ```
 
 ## Build Configuration
